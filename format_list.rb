@@ -12,8 +12,8 @@ end
 
 def format_lfhq_list (list)
     list&.gsub!(/\([^()]*\)/, '')
+    list&.gsub!(/[–]+/, ' - ')
     list&.gsub!(/^[0-9,.,\s]+/, '')
-    list&.gsub!(/[-]+/, ' - ')
 end
 
 get '/' do
